@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ site.app_name }}</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+
+  <body>
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">{{ site.tagline }}</p>
+
+          <h1>{{ site.headline }}</h1>
+
+          <p class="subtitle">{{ site.subtitle }}</p>
+
+          <div class="badge-row">
+            <span class="badge">Flask</span>
+            <span class="badge">GitHub Ready</span>
+            <span class="badge">Docker Ready</span>
+          </div>
+
+          <p class="time">
+            Hora del servidor:
+            <strong>{{ now }}</strong>
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="{{ url_for('static', filename=site.hero_image) }}"
+            alt="{{ site.hero_alt }}" />
+        </div>
+      </section>
+
+      <section class="cards">
+        {% for feature in site.features %}
+
+        <article class="card">
+          <h2>{{ feature.title }}</h2>
+
+          <p>{{ feature.text }}</p>
+        </article>
+
+        {% endfor %}
+      </section>
+
+      <footer>
+        <p>{{ site.footer }}</p>
+
+        <p>
+          <a href="/healthz"> Estado del servicio </a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

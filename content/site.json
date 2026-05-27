@@ -1,0 +1,23 @@
+{
+  "app_name": "Proyecto de Redes 2026",
+  "headline": "Aplicación web sencilla, lista para contenerizar, version desplegada automaticamente",
+  "subtitle": "Hecha con Flask para que puedas cambiar texto o imagen sin tocar la lógica del servidor.",
+  "hero_image": "images/hero.svg",
+  "hero_alt": "Ilustración del proyecto",
+  "tagline": "Ideal para pruebas de Git, Docker, ACR y Kubernetes.",
+  "features": [
+    {
+      "title": "Contenido editable",
+      "text": "Si el profesor pide cambiar el texto, solo modificas este archivo JSON."
+    },
+    {
+      "title": "Imagen flexible",
+      "text": "Puedes cambiar la imagen reemplazando el archivo en static/images."
+    },
+    {
+      "title": "Lista para despliegue",
+      "text": "La app ya queda preparada para Docker y para un pipeline CI/CD."
+    }
+  ],
+  "footer": "EIF-208 - Comunicaciones y Redes"
+}
