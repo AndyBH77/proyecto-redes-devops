@@ -1,6 +1,6 @@
 {
   "app_name": "Proyecto de Redes 2026",
-  "headline": "Aplicación web sencilla, lista para contenerizar, version desplegada automaticamente",
+  "headline": "Aplicación web sencilla, lista para contenerizar, version desplegada automaticamente v.02",
   "subtitle": "Hecha con Flask para que puedas cambiar texto o imagen sin tocar la lógica del servidor.",
   "hero_image": "images/hero.svg",
   "hero_alt": "Ilustración del proyecto",
