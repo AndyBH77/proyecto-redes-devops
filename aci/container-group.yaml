@@ -1,0 +1,43 @@
+apiVersion: 2021-10-01
+
+location: eastus
+
+name: flask-aci
+
+properties:
+
+  osType: Linux
+
+  restartPolicy: Always
+
+  containers:
+
+  - name: flask-app
+
+    properties:
+
+      image: ghcr.io/andybh77/flask-app:latest
+
+      ports:
+      - port: 5000
+
+      resources:
+
+        requests:
+          cpu: 1
+          memoryInGB: 1
+
+  ipAddress:
+
+    type: Public
+
+    dnsNameLabel: flask-redes-andybh77
+
+    ports:
+
+    - protocol: TCP
+      port: 5000
+
+tags:
+
+  proyecto: redes-devops
