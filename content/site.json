@@ -1,7 +1,7 @@
 {
   "app_name": "Proyecto de Redes 2026",
   "headline": "Aplicación web sencilla, lista para contenerizar, version desplegada automaticamente v.02",
-  "subtitle": "Hecha con Flask para que puedas cambiar texto o imagen sin tocar la lógica del servidor.",
+  "subtitle": "Albania es un pais ubicado en los Balcanes, con una poblacion de 2.7 millones de habitante, cuya capital es Tirana.",
   "hero_image": "images/hero.svg",
   "hero_alt": "Ilustración del proyecto",
   "tagline": "Ideal para pruebas de Git, Docker, ACR y Kubernetes.",
