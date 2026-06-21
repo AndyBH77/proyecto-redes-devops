@@ -1,4 +1,4 @@
-name: Build and Push to GHCR
+name: Build, Push and Deploy to ACI
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
@@ -16,9 +16,11 @@ jobs:
 
     steps:
 
+      # ── 1. Bajar el código del repo 
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # ── 2. Configurar Python (para verificar dependencias) 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -28,6 +30,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      # ── 3. Login a GHCR y construir/subir la imagen 
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
@@ -44,3 +47,29 @@ jobs:
         run: |
           docker push \
             ghcr.io/andybh77/flask-app:latest
+
+      # ── 4. Login a Azure con las credenciales guardadas en Secrets 
+      - name: Log in to Azure
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # ── 5. Borrar el contenedor ACI actual (si existe) 
+      #    El "|| true" hace que si no existe, el pipeline no falle
+      - name: Delete existing ACI container
+        run: |
+          az container delete \
+            --name flask-aci \
+            --resource-group rg-redes-devops \
+            --yes || true
+
+      # 6. Esperar a que Azure confirme que el contenedor fue eliminado 
+      - name: Wait for deletion
+        run: sleep 15
+
+      # 7    . Recrear     el contenedor ACI con la imagen nueva
+      - name: Deploy new ACI container
+        run: |
+          az container create \
+            --resource-group rg-redes-devops \
+            --file aci/container-group.yaml

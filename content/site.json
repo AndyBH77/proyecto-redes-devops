@@ -1,14 +1,14 @@
 {
   "app_name": "Proyecto de Redes 2026",
-  "headline": "Aplicación web sencilla, lista para contenerizar, version desplegada automaticamente v.02",
+  "headline": "Dato de Albania, version desplegada automaticamente",
   "subtitle": "Albania es un pais ubicado en los Balcanes, con una poblacion de 2.7 millones de habitante, cuya capital es Tirana.",
   "hero_image": "images/hero.svg",
   "hero_alt": "Ilustración del proyecto",
-  "tagline": "Ideal para pruebas de Git, Docker, ACR y Kubernetes.",
+  "tagline": "Ideal para visitar ya que cuenta con rica cultura y paisaje naturales nevados y calidos.",
   "features": [
     {
       "title": "Contenido editable",
-      "text": "Si el profesor pide cambiar el texto, solo modificas este archivo JSON."
+      "text": "Tiene la particularidad de contar con 185 mil bunkers en todo el territorio."
     },
     {
       "title": "Imagen flexible",
