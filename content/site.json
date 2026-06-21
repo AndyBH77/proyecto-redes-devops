@@ -7,16 +7,16 @@
   "tagline": "Ideal para visitar ya que cuenta con rica cultura y paisaje naturales nevados y calidos.",
   "features": [
     {
-      "title": "Contenido editable",
+      "title": "Curiosidad",
       "text": "Tiene la particularidad de contar con 185 mil bunkers en todo el territorio."
     },
     {
-      "title": "Imagen flexible",
-      "text": "Puedes cambiar la imagen reemplazando el archivo en static/images."
+      "title": "Lugares destacados",
+      "text": "Durres, Berat, Krume, Tropoya."
     },
     {
-      "title": "Lista para despliegue",
-      "text": "La app ya queda preparada para Docker y para un pipeline CI/CD."
+      "title": "Clima",
+      "text": "Noviembre a febrero con temperatura entre -5 a 5 grados centrigrados."
     }
   ],
   "footer": "EIF-208 - Comunicaciones y Redes"
